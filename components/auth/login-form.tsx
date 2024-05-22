@@ -15,6 +15,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { LoginSchema } from "@/schemas";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import { FormError } from "@/components/form-error";
+import { FormSuccess } from "@/components/form-success";
 
 export const LoginForm = () => {
 
@@ -84,7 +86,8 @@ export const LoginForm = () => {
                         )}
                         />
                     </div>
-
+                    <FormError/>
+                    <FormSuccess/>
                     <Button
                     className="w-full"
                     type="submit"
